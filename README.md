@@ -29,20 +29,33 @@ Cellpose's weights can be downloaded using the function "download_model_weights"
 
 # Set up the structure of directories
 ```
-project
-│   README.md
-│   file001.txt    
-│
-└───folder1
-│   │   file011.txt
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
+project    
+|___0_Raw
+│   │___"Round_name1"
+│   │       "round_name1"_s*_z*_ch00.tif
+|   |       "round_name1"_s*_z*_ch01.tif
+|   |       "round_name1"_s*_z*_ch02.tif
+|   |       "round_name1"_s*_z*_ch03.tif
+│   |        ...
+|   |___"Round_name2"
+│   │       "round_name1"_s*_z*_ch00.tif
+|   |       "round_name1"_s*_z*_ch01.tif
+|   |       "round_name1"_s*_z*_ch02.tif
+|   |       "round_name1"_s*_z*_ch03.tif
+│   |        ...
+|___1_Projected
+|   │___"FOV001"    
+|   │       MIP_"round_name1"_FOV001_ch00.tif
+|   |       MIP_"round_name1"_FOV001_ch01.tif
+|   |       MIP_"round_name1"_FOV001_ch02.tif
+|   |       MIP_"round_name1"_FOV001_ch03.tif
+|   |       ...
+|   |___"FOV002"
+|   |       ...
+|___2_Registered
+|___3_Decoded
+|___4_CellAssignment
+|___Codes
+|   |___"code_lib"
+|   |___"_codebook"
 ```
