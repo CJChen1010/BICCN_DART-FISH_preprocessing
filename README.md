@@ -73,10 +73,12 @@ Experiment
 |   |___"_codebook"
 ```
 # Maximal intensity projection and image registration
-
+The AlignerDriver.py script is used to maximal intensity project z-stack images to 2D images and register the 2D images to the reference image cycle. After maximal intensity projection, the script algins the images at the brightfield channel of each cycle to a reference cycle to learn the affine transformation parameters. Then, the parameters are used t0 apply transformation to all other fluorescent channels. The inputs in the Aligner.py are the names of the directories in O_Raw, the number of FOVs in the experiment, the reference cycle and the reference channel for registration. The outputs include the maximal intensity projected images stored in "1_Projected" stratefied by FOVs and the registered images stored in "2_Registered" stratified by FOVs.
 # Image stitching
-
+The StitchDriver.py script is used to stitch registered images in "2_Registered". It's a wrapper for ImageJ's Grid/Collection Stitching plugin. The imputs are rounds to be stitched, the reference cycle and channels, and the path to ImageJ's executables. The output stitched images is stored in the 2_Registered/stitched directory. The output "registration_reference_coordinates.csv" file will be used to convert data to the Starfish format.
 # Starfish decoding
+The starfishDARTFISHpipeline.py is used to decode spots in each FOV. Proper bcmag (barcode magnitude) values need to be tuned for images with various fluorescent intensities . Generally, the higher the bcmag, dimmer signals are discarded. The ouput of the decoded spots are stored as starfish_table_bcmagxx_FOVxxx.csv in the 3_Decoded/output_Starfish/bcmagxx directory.
+# Merging spots from all FOVs and filtering
 
 # Nucleus segmentation and assigment of decoded spots to nuclei
 
