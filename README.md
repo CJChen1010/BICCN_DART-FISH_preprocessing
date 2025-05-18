@@ -28,8 +28,20 @@ Download FIJI from https://downloads.imagej.net/fiji/latest/fiji-linux64.zip and
 Cellpose's weights can be downloaded using the function "download_model_weights" in cellpose.models.
 
 # Set up the structure of directories
+All data and codes to process DART-FISH images are kept in the same directory with the following structure of directories. 
+## 0_Raw
+0_Raw directory contails all tiff files from one DART-FISH experiments. The examples below shows the output tiff files from Leica SP8 microscope. Each tiff file is named after "round_name1"_s*_z*_ch*.tif format, where s is the field of view (FOV) number, z the number for z-stack, and ch the fluorescent channel.
+## 1_Projected
+
+## 2_Registered
+
+## 3_Decoded
+
+## 4_CellAssigment
+
+## Codes
 ```
-project    
+Experiment    
 |___0_Raw
 │   │___"Round_name1"
 │   │       "round_name1"_s*_z*_ch00.tif
@@ -59,3 +71,11 @@ project
 |   |___"code_lib"
 |   |___"_codebook"
 ```
+# Maximal intensity projection and image registration
+
+# Image stitching
+
+# Starfish decoding
+
+# Nucleus segmentation and assigment of decoded spots to nuclei
+
