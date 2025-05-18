@@ -28,7 +28,8 @@ Download FIJI from https://downloads.imagej.net/fiji/latest/fiji-linux64.zip and
 Cellpose's weights can be downloaded using the function "download_model_weights" in cellpose.models.
 
 # Set up the structure of directories
-```
+```bash
 |__0_Raw
-|__1_Prokected
+|__1_Projected
+|  |__2_Registered
 ```
